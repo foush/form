@@ -1,0 +1,18 @@
+<?php $formElement = $this->element->getZendFormElement(); ?>
+<?php $options = $formElement->getValueOptions(); ?>
+<strong>MultiCheckbox input template not available.</strong>
+<div class="fieldset radios">
+    <fieldset>
+        <ul>
+            <li class="field" data-ng-repeat="item in ['option 1', 'option 2', 'option 3']" >
+                <legend>{{item}}:</legend>
+                <ul>
+                    <li class="field">
+                        <input type="checkbox" checklist-model="" checklist-value="item" />
+                        <label></label>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </fieldset>
+</div>

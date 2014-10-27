@@ -1,0 +1,27 @@
+{
+	"name": "fousheezy/autoform",
+	"description": "ZF2 / Doctrine integrated form generator",
+	"type": "library",
+	"license": "MIT",
+	"keywords": ["doctrine","module","zf2","form"],
+	"authors": [
+		{"name": "John Foushee", "email": "johnfoushee@gmail.com", "homepage": "http://johnfoushee.com"}
+	],
+	"minimum-stability": "dev",
+	"require": {
+		"php": ">=5.3.23",
+		"doctrine/common": ">=2.4,<2.6-dev",
+		"zendframework/zend-servicemanager":  "~2.3",
+	        "zendframework/zend-validator":       "~2.3"
+	},
+	"require-dev": {
+        	"phpunit/phpunit":             "~3.7",
+        	"squizlabs/php_codesniffer":   "1.5.*",
+        	"zendframework/zendframework": "~2.3"
+    	},
+	"autoload": {
+        	"psr-0": {
+            		"AutoForm\\": "src/"
+        	}
+    	}
+}

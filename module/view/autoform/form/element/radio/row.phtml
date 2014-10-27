@@ -1,0 +1,15 @@
+<?php
+if ($this->element) {
+	/* @var $element \AutoForm\Annotation\Row */
+	$element = $this->element;
+	?>
+	<div class="<?php echo $element->getCssClass(); ?>">
+		<fieldset>
+		<?php
+		// render all rows
+		echo $this->partial('autoform/form/children', 'autoform', array('element' => $this->element, 'readonly' => $this->readonly));
+		?>
+		</fieldset>
+	</div>
+<?php
+}

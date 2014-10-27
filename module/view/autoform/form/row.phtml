@@ -1,0 +1,23 @@
+<?php
+if ($this->element) {
+	/* @var $element \AutoForm\Annotation\Row */
+	$element = $this->element;
+
+	$ns = $element->getParentFormTag();
+	$children = $element->getChildrenInOrder();
+	$errorConditions = array();
+
+    /* @var $child \AutoForm\Annotation\Field */
+    foreach ($children as $child) {
+        $errorConditions[] = "_fAlert.getAlerts('".$ns."','".$child->getNgModel()."').length";
+    }
+
+	?>
+	<div class="<?php echo $element->getCssClass(); ?>" <?php if (!$this->readonly): ?>data-ng-class="{'error': (<?php echo implode(' || ', $errorConditions) ?>)}"<?php endif;?>>
+		<?php
+		// render all rows
+		echo $this->partial('autoform/form/children', 'autoform', array('element' => $this->element, 'scope' => $this->scope, 'subform' => $this->subform, 'readonly' => $this->readonly));
+		?>
+	</div>
+<?php
+}

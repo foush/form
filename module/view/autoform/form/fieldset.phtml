@@ -1,0 +1,12 @@
+<?php if ($this->element): ?>
+    <?php /* @var $element \AutoForm\Annotation\FieldSet */ ?>
+    <?php $element = $this->element; ?>
+	<div class="fieldset">
+		<fieldset>
+			<?php if ($element->getLegend()) :?>
+			    <legend><?php echo $element->getLegend(); ?></legend>
+            <?php endif; ?>
+            <?php echo $this->partial('autoform/form/children', 'autoform', array('element' => $this->element, 'scope' => $this->scope, 'subform' => $this->subform, 'readonly' => $this->readonly)); ?>
+		</fieldset>
+	</div>
+<?php endif; ?>
