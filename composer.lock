@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "556d6bea3bc0c64856ea48a6ddf726ba",
+    "hash": "50cf944d2b78c2b7297535e12bf929b4",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -409,22 +409,22 @@
             "source": {
                 "type": "git",
                 "url": "/Users/fousheezy/Development/fousheezy-zf2-common",
-                "reference": "f1b8f37dc8eb750a2982ac6ed26c7c88240108a6"
+                "reference": "869db4cc4802b0618f1e1a30f22362e65b57e9e6"
             },
             "require": {
                 "doctrine/common": ">=2.4,<2.6-dev",
                 "php": ">=5.3.23",
-                "zendframework/zend-servicemanager": "~2.3"
+                "zendframework/zend-servicemanager": "~2.2.7"
             },
             "require-dev": {
                 "phpunit/phpunit": "~3.7",
                 "squizlabs/php_codesniffer": "1.5.*",
-                "zendframework/zendframework": "~2.3"
+                "zendframework/zendframework": "~2.2.7"
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "FzyZF2Common\\": "src/"
+                    "FzyCommon\\": "src/"
                 }
             },
             "license": [
@@ -443,24 +443,24 @@
                 "module",
                 "zf2"
             ],
-            "time": "2014-10-27 23:07:11"
+            "time": "2014-10-28 15:27:27"
         },
         {
             "name": "zendframework/zendframework",
-            "version": "dev-develop",
+            "version": "2.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zf2.git",
-                "reference": "e6f6eb70d28aa1b69b145b6f3519234958122434"
+                "reference": "f5739702d974f1242ca4101467c58e94cb568294"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zf2/zipball/e6f6eb70d28aa1b69b145b6f3519234958122434",
-                "reference": "e6f6eb70d28aa1b69b145b6f3519234958122434",
+                "url": "https://api.github.com/repos/zendframework/zf2/zipball/f5739702d974f1242ca4101467c58e94cb568294",
+                "reference": "f5739702d974f1242ca4101467c58e94cb568294",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.23",
+                "php": ">=5.3.3",
                 "zendframework/zendxml": "~1.0-dev"
             },
             "replace": {
@@ -518,19 +518,17 @@
             },
             "require-dev": {
                 "doctrine/annotations": ">=1.0",
-                "fabpot/php-cs-fixer": "dev-master#fcbb09b5204",
+                "fabpot/php-cs-fixer": "*@dev",
                 "ircmaxell/random-lib": "dev-master",
                 "ircmaxell/security-lib": "dev-master",
-                "mikey179/vfsstream": "1.2.*",
-                "phpunit/phpunit": "3.7.*",
-                "satooshi/php-coveralls": "dev-master",
-                "sebastianbergmann/phpcov": "1.1.0"
+                "ocramius/proxy-manager": "0.4.*",
+                "phpunit/phpunit": "3.7.*"
             },
             "suggest": {
                 "doctrine/annotations": "Doctrine Annotations >=1.0 for annotation features",
                 "ext-intl": "ext/intl for i18n features (included in default builds of PHP)",
                 "ircmaxell/random-lib": "Fallback random byte generator for Zend\\Math\\Rand if OpenSSL/Mcrypt extensions are unavailable",
-                "ocramius/proxy-manager": "ProxyManager 0.5.* to handle lazy initialization of services",
+                "ocramius/proxy-manager": "ProxyManager to handle lazy initialization of services",
                 "zendframework/zendpdf": "ZendPdf for creating PDF representations of barcodes",
                 "zendframework/zendservice-recaptcha": "ZendService\\ReCaptcha for rendering ReCaptchas in Zend\\Captcha and/or Zend\\Form"
             },
@@ -542,8 +540,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev",
-                    "dev-develop": "2.4-dev"
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
                 }
             },
             "autoload": {
@@ -561,7 +559,7 @@
                 "framework",
                 "zf2"
             ],
-            "time": "2014-10-13 11:10:45"
+            "time": "2014-09-16 22:41:30"
         },
         {
             "name": "zendframework/zendxml",
