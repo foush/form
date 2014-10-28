@@ -409,7 +409,7 @@
             "source": {
                 "type": "git",
                 "url": "/Users/fousheezy/Development/fousheezy-zf2-common",
-                "reference": "e2ad80096831ecc091ee64ba6db72c9193b806cb"
+                "reference": "8a2c81d2f928e046d20df731f3f9474553026f51"
             },
             "require": {
                 "doctrine/common": ">=2.4,<2.6-dev",
@@ -443,7 +443,7 @@
                 "module",
                 "zf2"
             ],
-            "time": "2014-10-28 18:48:23"
+            "time": "2014-10-28 21:02:19"
         },
         {
             "name": "zendframework/zendframework",
