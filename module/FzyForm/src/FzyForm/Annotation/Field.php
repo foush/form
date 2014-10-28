@@ -16,7 +16,6 @@ class Field extends Element
 
     const DEFAULT_TEMPLATE_ELEMENT_LABEL   = 'fzyform/form/element/label.phtml';
     const DEFAULT_TEMPLATE_ELEMENT_INPUT   = 'fzyform/form/element/input.phtml';
-    const DEFAULT_TEMPLATE_ELEMENT_BUTTONS = 'fzyform/form/element/buttons.phtml';
     const DEFAULT_TEMPLATE_ELEMENT_HELP    = 'fzyform/form/element/help.phtml';
     const DEFAULT_TEMPLATE_ELEMENT_ERROR   = 'fzyform/form/element/error.phtml';
 
@@ -24,15 +23,12 @@ class Field extends Element
 
     protected $labelTemplate;
     protected $inputTemplate;
-    protected $buttonsTemplate;
     protected $helpTemplate;
     protected $errorTemplate;
 
     protected $helpText;
 
     protected $ngModel;
-
-    protected $buttons;
 
     /**
      * @var strings
@@ -49,12 +45,10 @@ class Field extends Element
         $this->helpText         = $this->extractValue($elementData, 'help');
         $this->labelTemplate    = $this->extractValue($elementData, 'labelTemplate', static::DEFAULT_TEMPLATE_ELEMENT_LABEL);
         $this->inputTemplate    = $this->extractValue($elementData, 'inputTemplate', static::DEFAULT_TEMPLATE_ELEMENT_INPUT);
-        $this->buttonsTemplate  = $this->extractValue($elementData, 'buttonsTemplate', static::DEFAULT_TEMPLATE_ELEMENT_BUTTONS);
         $this->helpTemplate     = $this->extractValue($elementData, 'helpTemplate', static::DEFAULT_TEMPLATE_ELEMENT_HELP);
         $this->errorTemplate    = $this->extractValue($elementData, 'errorTemplate', static::DEFAULT_TEMPLATE_ELEMENT_ERROR);
         $this->ngModel          = $this->extractValue($elementData, 'ngModel');
 
-        $this->buttons = $this->extractValue($elementData, 'buttons', '');
     }
 
     public static function create(array $elementData, ElementInterface $element, AnnotatedForm $form, EntityToForm $e2f)

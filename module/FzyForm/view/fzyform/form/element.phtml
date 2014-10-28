@@ -6,7 +6,6 @@ if ($this->element) {
 		echo $this->partial($element->getLabelTemplate(), array('element' => $element));
 	}
 	echo $this->partial($element->getInputTemplate(), array('element' => $element));
-    echo $this->partial($element->getButtonsTemplate(), array('element' => $element));
     echo $this->partial($element->getHelpTemplate(), array('element' => $element));
     echo $this->partial($element->getErrorTemplate(), array('element' => $element));
 }
