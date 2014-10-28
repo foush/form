@@ -1,0 +1,42 @@
+<?php
+/* @var $element \FzyForm\Annotation\Field */
+/* @var $e \Zend\Form\ElementInterface */
+$e = $this->element->getZendFormElement();
+
+if ($this->readonly) {
+    $e->setAttribute('data-ng-model', $this->element->getFullNgModel());
+
+    // Modifications required to get the correct select2 behavior
+    if (($autorender = $e->getOption('autorender')) && isset($autorender['selectOptions']) && $e->getValue()) {
+        // The select2 is being rendered and has a value present
+        // Nothing to be done here, all clear
+    } else {
+        // The element has selectOptions (i.e. it's a select2) but no defined value
+        // This will remove select2 so that placeholder text doesn't appear in the read only view
+        $options = $e->getOptions();
+
+        // Remove select2 options, leaving only the hidden element behind
+        unset($options['selectOptions']);
+        $e->setOptions($options);
+
+        // Pull the select2 attribute off the input
+        $e->removeAttribute('data-ui-select2');
+    }
+} else {
+    // This isn't read only, so continue business as usual
+    $e->setAttribute('data-ng-model', $this->element->getFullNgModel());
+    $disabled = $e->getAttribute('data-ng-disabled');
+    if (empty($disabled)) {
+        $e->setAttribute('data-ng-disabled', 'saving');
+    }
+}
+
+// Null objects and select2 don't work together very well
+// So setting to entities to null where needed
+$value = $e->getValue();
+if (is_object($value) && method_exists($value, 'id') && !$value->id()) {
+    $e->setValue(null);
+}
+
+echo $this->formElement($this->element->getZendFormElement());
+?>

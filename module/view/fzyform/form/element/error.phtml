@@ -1,0 +1,19 @@
+<?php
+	/* @var $element \FzyForm\Annotation\Field */
+	$elementErrors = "_fAlert.getAlerts('{$this->element->getParentFormTag()}','{$this->element->getNgModel()}')";
+
+    $additionalAttributes     = isset($this->attrs) && is_array($this->attrs) && count($this->attrs) ? $this->attrs : false;
+    $additionalItemAttributes = isset($additionalAttributes['item']) && is_array($additionalAttributes['item']) && count($additionalAttributes['item']) ? $additionalAttributes['item'] : array();
+    $additionalWrapAttributes = isset($additionalAttributes['wrap']) && is_array($additionalAttributes['wrap']) && count($additionalAttributes['wrap']) ? $additionalAttributes['wrap'] : array();
+    $itemAttributeString = '';
+    $wrapAttributeString = '';
+?>
+<?php foreach ($additionalItemAttributes as $attribute => $value): ?>
+    <?php $itemAttributeString .= $this->attribute($attribute, $value) . ' '; ?>
+<?php endforeach; ?>
+<?php foreach ($additionalWrapAttributes as $attribute => $value): ?>
+    <?php $wrapAttributeString .= $this->attribute($attribute, $value) . ' '; ?>
+<?php endforeach; ?>
+<div data-ng-if="<?php echo $elementErrors ?>.length" <?php echo $wrapAttributeString; ?>>
+	<strong class="error-message" data-ng-repeat="alert in <?php echo $elementErrors ?>" data-ng-bind-html="alert.message" <?php echo $itemAttributeString; ?>></strong>
+</div>

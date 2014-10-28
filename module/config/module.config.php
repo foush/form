@@ -1,14 +1,13 @@
 <?php
 return array(
-	'service_manager' => array(
+	'view_helpers' => array(
 		'invokables' => array(
-			'AutoForm\Service\EntityToForm' => 'AutoForm\Service\EntityToForm'
+			'fzyForm' => 'FzyForm\View\Helper\FzyForm',
 		),
-		'factories' => array(
-			'doctrine.cli' => 'DoctrineModule\Service\CliFactory',
-		),
-		'abstract_factories' => array(
-			'DoctrineModule' => 'DoctrineModule\ServiceFactory\AbstractDoctrineServiceFactory',
+	),
+	'view_manager' => array(
+		'template_path_stack' => array(
+			__DIR__ . '/../view',
 		),
 	),
 );

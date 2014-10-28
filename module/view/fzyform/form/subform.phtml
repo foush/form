@@ -1,0 +1,11 @@
+<?php
+
+/* @var $vm \Zend\View\Helper\ViewModel */
+
+//var_dump($this->viewModel()->getVariables());
+
+/* @var $element \FzyForm\Annotation\Subform */
+// render fieldsets
+foreach ($this->element->getChildrenInOrder() as $child) {
+	echo $this->partial($child->getTemplate(), array('element' => $child, 'readonly' => $this->readonly));
+}

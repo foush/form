@@ -1,0 +1,8 @@
+<?php
+if ($this->element) {
+	/* @var $element \FzyForm\Annotation\Field */
+	$element = $this->element;
+	$model = $element->getFullNgModel();
+
+	?><div data-text-angular <?php foreach ($element->getZendFormElement()->getAttributes() as $attributeName => $attributeValue) {echo $attributeName.'="'.$attributeValue.'"';} ?><?php if (!empty($model)) {echo 'data-ng-model="'.$model.'"';} ?>></div><?php
+}

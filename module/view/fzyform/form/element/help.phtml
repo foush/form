@@ -1,0 +1,6 @@
+<?php
+/* @var $this->element \FzyForm\Annotation\Field */
+$helpText = $this->element->getHelpText();
+if (!empty($helpText)) {
+	?><small><?php echo $helpText; ?></small><?php
+}

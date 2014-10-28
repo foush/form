@@ -1,0 +1,32 @@
+<ul>
+    <?php
+        // SETUP
+        $counter = 0;
+        $model   = $this->element->getFullNgModel();
+        /* @var $element \FzyForm\Annotation\Field\Radio */
+        $options  = $this->element->getValueSet();
+        $disabled = $this->element->getZendFormElement()->getAttribute('data-ng-disabled');
+        $click    = $this->element->getNgClick();
+
+        // Conditional logic
+        if ($disabled == 'true') {
+            // If this is disabled, then no click events
+            $ngClick = "false";
+        } else {
+            $disabled = 'saving';
+            if (!empty($click)) {
+                // If an explicit ng-click function is specified, use it
+                $ngClick = "data-ng-click=\"$click\" ";
+            }
+        }
+    ?>
+    <?php foreach ($options as $value => $label): ?>
+        <?php $id = $this->element->getName().$counter++; ?>
+        <?php $cmpValue = $this->attributeValue($value);  ?>
+        <?php if (empty($click))  $ngClick = "data-ng-click=\"$model = $cmpValue \""; ?>
+        <li class="field" <?php if ($disabled != 'true') echo $ngClick; ?>>
+            <input type="<?php echo $this->element->getInputType(); ?>" name="<?php echo $id; ?>" id="<?php echo $id; ?>" value="<?php echo $value; ?>" data-ng-checked="<?php echo $model; ?> == <?php echo $cmpValue; ?>" data-ng-disabled="<?php echo $disabled; ?>" />
+            <label for="<?php echo $id; ?>"><?php echo $label; ?></label>
+        </li>
+    <?php endforeach; ?>
+</ul>

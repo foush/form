@@ -1,5 +1,0 @@
-<?php
-    /* @var $this->element \AutoForm\Annotation\Field */
-    $labelAppend = ':';
-    $labelAppend .= $this->element->getZendFormElement()->getAttribute('required') && !$this->readonly ? ' <em class="req">*</em>' : '';
-    echo $this->formLabel($this->element->getZendFormElement(), $labelAppend, \Zend\Form\View\Helper\FormLabel::PREPEND);

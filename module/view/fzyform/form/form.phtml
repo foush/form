@@ -1,0 +1,16 @@
+<?php
+if ($this->element) {
+	/* @var $element \FzyForm\Annotation\Form */
+	$element = $this->element;
+
+    /* @var $form \Zend\Form\Form */
+	$form = $element->getZendFormElement();
+
+	$denotesText = $element->getHasDenotesText() ? $this->partial('fzyform/form/denotes', 'fzyform', array('element' => $this->element, 'scope' => $this->scope, 'readonly' => $this->readonly )) : '';
+
+	echo !$this->readonly ? $denotesText : null;
+	echo $this->form()->openTag($form);
+	echo $this->partial('fzyform/form/children', 'fzyform', array('element' => $this->element, 'scope' => $this->scope, 'subform' => $this->subform, 'readonly' => $this->readonly));
+    echo $this->form()->closeTag($form);
+    echo !$this->readonly ? $denotesText : null;
+}

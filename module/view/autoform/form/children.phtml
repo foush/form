@@ -1,7 +1,0 @@
-<?php
-
-/* @var $element \AutoForm\Annotation\Subform */
-
-foreach ($this->element->getChildrenInOrder() as $child) {
-	echo $this->partial($child->getTemplate(), array('element' => $child));
-}
