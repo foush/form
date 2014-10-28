@@ -409,7 +409,7 @@
             "source": {
                 "type": "git",
                 "url": "/Users/fousheezy/Development/fousheezy-zf2-common",
-                "reference": "869db4cc4802b0618f1e1a30f22362e65b57e9e6"
+                "reference": "d108e72fa3dc0055c61f258ef9c1b363efaaad79"
             },
             "require": {
                 "doctrine/common": ">=2.4,<2.6-dev",
@@ -424,7 +424,7 @@
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "FzyCommon\\": "src/"
+                    "FzyCommon\\": "module/"
                 }
             },
             "license": [
@@ -443,7 +443,7 @@
                 "module",
                 "zf2"
             ],
-            "time": "2014-10-28 15:27:27"
+            "time": "2014-10-28 17:25:56"
         },
         {
             "name": "zendframework/zendframework",
