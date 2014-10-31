@@ -29,7 +29,7 @@ class FzyForm extends Base
     {
         $options = $form->getOptions();
         if (!isset($options[self::PARSED_FORM_OPTION_KEY])) {
-            $options[self::PARSED_FORM_OPTION_KEY] = new \FzyForm\Annotation\Form($form, $this->getService('entity_to_form'));
+            $options[self::PARSED_FORM_OPTION_KEY] = new \FzyForm\Annotation\Form($form, $this->getService('fzyEntityToForm'));
             $form->setOptions($options);
         }
         /* @var $annotated \FzyForm\Annotation\Form */
