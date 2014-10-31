@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "806df7274117687fced8b44474443e80",
+    "hash": "6f9658bba5aafd1c9dace6ecd2bd3410",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -408,8 +408,8 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "/Users/fousheezy/Development/fousheezy-zf2-common",
-                "reference": "8a2c81d2f928e046d20df731f3f9474553026f51"
+                "url": "/Users/fousheezy/Development/fzycommon",
+                "reference": "52a29868f263dfcdd2a613ebb8c6b1c6144f8609"
             },
             "require": {
                 "doctrine/common": ">=2.4,<2.6-dev",
@@ -443,7 +443,7 @@
                 "module",
                 "zf2"
             ],
-            "time": "2014-10-28 21:02:19"
+            "time": "2014-10-31 15:28:43"
         },
         {
             "name": "zendframework/zendframework",
