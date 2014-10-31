@@ -28,7 +28,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "/Users/fousheezy/Development/fousheezy-zf2-common"
+            "url": "/Users/fousheezy/Development/fzycommon"
         }
     ]
 }
