@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "49540684b2aec0cb72491cf0f5b8a806",
+    "hash": "3db6b3edc225341d82f6c4bbb30c36a1",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -408,8 +408,14 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "/Users/fousheezy/Development/fzycommon",
+                "url": "https://github.com/fousheezy/common.git",
                 "reference": "34d158d8182d102e1001ab6501fee2b8de930f3a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fousheezy/common/zipball/34d158d8182d102e1001ab6501fee2b8de930f3a",
+                "reference": "34d158d8182d102e1001ab6501fee2b8de930f3a",
+                "shasum": ""
             },
             "require": {
                 "doctrine/common": ">=2.4",
@@ -427,6 +433,7 @@
                     "FzyCommon\\": "module/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
