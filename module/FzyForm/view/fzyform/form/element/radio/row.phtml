@@ -7,7 +7,7 @@ if ($this->element) {
 		<fieldset>
 		<?php
 		// render all rows
-		echo $this->partial('fzyform/form/children', 'fzyform', array('element' => $this->element, 'readonly' => $this->readonly));
+		echo $this->partial('fzyform/form/children', array('element' => $this->element));
 		?>
 		</fieldset>
 	</div>

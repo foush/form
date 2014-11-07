@@ -5,7 +5,7 @@ use FzyForm\Annotation\Field\Checkbox;
 use FzyForm\Annotation\Field\MultiCheckbox;
 use FzyForm\Annotation\Field\Radio;
 use FzyForm\Annotation\Field\Select;
-use FzyForm\Service\EntityToForm;
+use FzyCommon\Service\EntityToForm;
 use Zend\Form\ElementInterface;
 use FzyForm\Annotation\Form as AnnotatedForm;
 use FzyForm\Annotation\Field\Wysiwyg;

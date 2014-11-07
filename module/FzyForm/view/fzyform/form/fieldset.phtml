@@ -6,7 +6,7 @@
 			<?php if ($element->getLegend()) :?>
 			    <legend><?php echo $element->getLegend(); ?></legend>
             <?php endif; ?>
-            <?php echo $this->partial('fzyform/form/children', 'fzyform', array('element' => $this->element, 'scope' => $this->scope, 'subform' => $this->subform, 'readonly' => $this->readonly)); ?>
+            <?php echo $this->partial('fzyform/form/children', array('element' => $this->element, 'scope' => $this->scope, 'subform' => $this->subform)); ?>
 		</fieldset>
 	</div>
 <?php endif; ?>

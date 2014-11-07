@@ -5,7 +5,7 @@ use FzyCommon\Entity\BaseInterface;
 use FzyForm\Exception\Annotation\Subform\GetterDoesNotExist;
 use FzyForm\Exception\Annotation\Subform\GetterNotSet;
 use FzyForm\Exception\Annotation\Subform\InvalidSubEntity;
-use FzyForm\Service\EntityToForm;
+use FzyCommon\Service\EntityToForm;
 
 class Subform extends Field
 {

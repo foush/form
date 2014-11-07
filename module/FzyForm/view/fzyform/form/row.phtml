@@ -16,7 +16,7 @@ if ($this->element) {
 	<div class="<?php echo $element->getCssClass(); ?>" <?php if (!$this->readonly): ?>data-ng-class="{'error': (<?php echo implode(' || ', $errorConditions) ?>)}"<?php endif;?>>
 		<?php
 		// render all rows
-		echo $this->partial('fzyform/form/children', 'fzyform', array('element' => $this->element, 'scope' => $this->scope, 'subform' => $this->subform, 'readonly' => $this->readonly));
+		echo $this->partial('fzyform/form/children', array('element' => $this->element, 'scope' => $this->scope, 'subform' => $this->subform));
 		?>
 	</div>
 <?php
