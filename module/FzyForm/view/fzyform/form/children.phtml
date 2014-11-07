@@ -1,7 +1,8 @@
 <?php
+if ($this->element) {
+	/* @var $element \FzyForm\Annotation\Subform */
 
-/* @var $element \FzyForm\Annotation\Subform */
-
-foreach ($this->element->getChildrenInOrder() as $child) {
-	echo $this->partial($child->getTemplate(), array('element' => $child));
+	foreach ( $this->element->getChildrenInOrder() as $child ) {
+		echo $this->partial( $child->getTemplate(), array( 'element' => $child ) );
+	}
 }

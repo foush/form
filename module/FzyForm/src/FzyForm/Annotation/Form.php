@@ -1,7 +1,7 @@
 <?php
 namespace FzyForm\Annotation;
 
-use FzyForm\Service\EntityToForm;
+use FzyCommon\Service\EntityToForm;
 use Zend\Form\FormInterface;
 use Zend\Form\ElementInterface;
 
