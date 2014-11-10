@@ -9,8 +9,8 @@
     ?>
     <?php foreach ($options as $value => $label): ?>
         <?php $id = $this->element->getName().$counter++; ?>
-        <li class="field" data-ng-click=<?php echo vsprintf( '"%s || (%s = %s)"', array($disabled, $model, $value)); ?>>
-            <input type="<?php echo $this->element->getInputType(); ?>" name="<?php echo $id; ?>" id="<?php echo $id; ?>" value=<?php echo sprintf('"%s"', $value); ?> data-ng-checked=<?php echo sprintf('"%s == %s"', $model, $value); ?> data-ng-disabled=<?php echo sprintf('"%s"', $disabled); ?> />
+        <li class="field" data-ng-click=<?php echo vsprintf( '"%s || (%s = \'%s\')"', array($disabled, $model, $value)); ?>>
+            <input type="<?php echo $this->element->getInputType(); ?>" name="<?php echo $id; ?>" id="<?php echo $id; ?>" value=<?php echo sprintf('"%s"', $value); ?> data-ng-checked=<?php echo sprintf('"%s == \'%s\'"', $model, $value); ?> data-ng-disabled=<?php echo sprintf('"%s"', $disabled); ?> />
             <label for="<?php echo $id; ?>"><?php echo $label; ?></label>
         </li>
     <?php endforeach; ?>
