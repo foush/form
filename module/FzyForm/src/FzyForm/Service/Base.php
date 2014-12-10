@@ -1,6 +1,6 @@
 <?php
 namespace FzyForm\Service;
 
-class Base extends \FzyCommon\Service\Base {
-
+class Base extends \FzyCommon\Service\Base
+{
 }

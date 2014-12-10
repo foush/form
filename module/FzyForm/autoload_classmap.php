@@ -21,6 +21,8 @@ return array(
   'FzyForm\Exception\Annotation\Subform\InvalidSubEntity'   => __DIR__ . '/src/FzyForm/Exception/Annotation/Subform/InvalidSubEntity.php',
   'FzyForm\Exception\Annotation\Subform'                    => __DIR__ . '/src/FzyForm/Exception/Annotation/Subform.php',
   'FzyForm\Exception\Base'                                  => __DIR__ . '/src/FzyForm/Exception/Base.php',
+  'FzyForm\Service\Base'                                    => __DIR__ . '/src/FzyForm/Service/Base.php',
+  'FzyForm\Service\Render'                                  => __DIR__ . '/src/FzyForm/Service/Render.php',
   'FzyForm\Service\Update\Base'                             => __DIR__ . '/src/FzyForm/Service/Update/Base.php',
   'FzyForm\View\Helper\FzyForm'                             => __DIR__ . '/src/FzyForm/View/Helper/FzyForm.php',
 );

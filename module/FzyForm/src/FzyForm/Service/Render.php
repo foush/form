@@ -8,8 +8,8 @@ use Zend\Form\FormInterface;
  * @package FzyForm\Service
  * Service Key: FzyForm\Render
  */
-class Render extends Base {
-
+class Render extends Base
+{
     const PARSED_FORM_OPTION_KEY = '__parsed_form';
 
     public function handle(FormInterface $form, $options = array())
@@ -25,6 +25,7 @@ class Render extends Base {
         $viewHelperPlugin = $this->getServiceLocator()->get('ViewHelperManager');
         /* @var $partialPlugin \Zend\View\Helper\Partial */
         $partialPlugin = $viewHelperPlugin->get('partial');
+
         return $partialPlugin($annotated->getTemplate(), array('element' => $annotated, 'options' => $options));
     }
 
