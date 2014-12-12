@@ -21,12 +21,8 @@ class Render extends Base
         }
         /* @var $annotated \FzyForm\Annotation\Form */
         $annotated = $options[self::PARSED_FORM_OPTION_KEY];
-        /* @var $viewHelperPlugin \Zend\View\HelperPluginManager */
-        $viewHelperPlugin = $this->getServiceLocator()->get('ViewHelperManager');
-        /* @var $partialPlugin \Zend\View\Helper\Partial */
-        $partialPlugin = $viewHelperPlugin->get('partial');
 
-        return $partialPlugin($annotated->getTemplate(), array('element' => $annotated, 'options' => $options));
+        return $this->getServiceLocator()->get('FzyCommon\Render')->handle($annotated->getTemplate(), array('element' => $annotated, 'options' => $options));
     }
 
 }
