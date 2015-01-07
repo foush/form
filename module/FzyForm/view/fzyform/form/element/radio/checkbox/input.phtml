@@ -1,0 +1,29 @@
+<ul>
+    <?php
+        // SETUP
+        $counter = 0;
+        $model   = $this->element->getFullNgModel();
+        /* @var $element \FzyForm\Annotation\Field\Radio */
+        $options  = $this->element->getValueSet();
+        $disabled = $this->element->getZendFormElement()->getAttribute('data-ng-disabled');
+    /**
+     * This directive adds a fzyCheckboxToggle function for the click event so clicking either the label or the checkbox
+     * will update the model
+     */
+    $toggleDirective = $this->element->getZendFormElement()->getAttribute('toggle-directive');
+    if (empty($toggleDirective)) {
+        $toggleDirective = 'fzy-checkbox-toggle';
+    }
+    $toggleDirectiveSource = $this->element->getZendFormElement()->getAttribute('toggle-directive-source');
+    if (empty($toggleDirectiveSource)) {
+        $toggleDirectiveSource = '/dist/js/app/directives/checkbox-toggle.js';
+    }
+    ?>
+    <?php foreach ($options as $value => $label): ?>
+        <?php $id = $this->element->getName().$counter++; ?>
+        <li class="field" <?php echo $toggleDirective; ?>=<?php echo vsprintf('"%s"', json_encode(array('disabled' => $disabled, 'model' => $model, 'value' => $value))); ?> data-ng-click="fzyCheckboxToggle()">
+            <input type="<?php echo $this->element->getInputType(); ?>" name="<?php echo $id; ?>" id="<?php echo $id; ?>" value=<?php echo sprintf('"%s"', $value); ?> data-ng-model=<?php echo sprintf('"%s"', $model) ?> data-ng-disabled=<?php echo sprintf('"%s"', $disabled); ?> />
+            <label for="<?php echo $id; ?>"><?php echo $label; ?></label>
+        </li>
+    <?php endforeach; ?>
+</ul>

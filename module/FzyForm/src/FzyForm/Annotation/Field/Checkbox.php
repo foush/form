@@ -7,7 +7,7 @@ use FzyForm\Annotation\Row;
 class Checkbox extends Radio
 {
     const DEFAULT_VALUE_LABEL = 'Yes';
-
+    const DEFAULT_TEMPLATE_ELEMENT_INPUT = 'fzyform/form/element/radio/checkbox/input.phtml';
     /**
      * @var string
      */
